@@ -1,14 +1,16 @@
 import { useState } from 'react'
+import {Routes, Route} from 'react-router-dom'
 
 import './App.css'
+import NavBar from './components/navbar'
 
 function App() {
 
   return (
     <>
-      <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+     <div className='min-h-screen p-6 bg-white text-gray-600 text-lg'>
+        <NavBar/>
+     </div>
     </>
   )
 }
