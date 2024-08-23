@@ -8,7 +8,7 @@ console.log(SearchIcon);
 export default function NavBar() {
   return (
     <div>
-      <nav className="flex  top-0  w-[100%]  justify-between items-center py-4 bg-white drop-shadow-md  flex-col lg:flex-row gap-5 lg:gap-0">
+      <nav className="flex top-0  w-[100%]  justify-between items-center py-4 bg-white drop-shadow-md  flex-col lg:flex-row gap-5 lg:gap-0">
         <div className="flex items-center gap-4">
           <img
             src="/public/logo.png"
@@ -75,7 +75,7 @@ export default function NavBar() {
               }
             </NavLink>
           </li>
-          <li>
+          {/* <li>
             <NavLink to={"/"} className="">
               {
                 <RamenDiningIcon
@@ -96,7 +96,7 @@ export default function NavBar() {
                 />
               }
             </NavLink>
-          </li>
+          </li> */}
         </ul>
       </form>
     </div>
