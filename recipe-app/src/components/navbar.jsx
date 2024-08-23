@@ -1,10 +1,16 @@
 import SearchIcon from '@mui/icons-material/Search';
+import HomeIcon from '@mui/icons-material/Home';
+import GradeIcon from '@mui/icons-material/Grade';
+import RamenDiningIcon from '@mui/icons-material/RamenDining';
+import { NavLink } from 'react-router-dom';
 console.log(SearchIcon);
 
 
 
 export default function NavBar() {
   return (
+    <div>
+
     <nav className="flex  top-0  w-[100%]  justify-between items-center py-4 bg-white drop-shadow-md  flex-col lg:flex-row gap-5 lg:gap-0">
       <div className="flex items-center gap-4"> 
     
@@ -23,5 +29,19 @@ export default function NavBar() {
         />
       </form>
     </nav>
+      <form >
+        <ul className='flex gap-[40%] items-center justify-center'>
+          <li>
+            <NavLink to={'/'} className=''>{<HomeIcon/>}</NavLink>
+          </li>
+          <li>
+            <NavLink to={'/favorite'} className=''>{<GradeIcon/>}</NavLink>
+          </li>
+          <li>
+            <NavLink to={'/'} className=''>{<RamenDiningIcon/>}</NavLink>
+          </li>
+        </ul>
+      </form>
+    </div>
   );
 }
