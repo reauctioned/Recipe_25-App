@@ -1,3 +1,8 @@
+import SearchIcon from '@mui/icons-material/Search';
+console.log(SearchIcon);
+
+
+
 export default function NavBar() {
   return (
     <nav className="flex  top-0  w-[100%]  justify-between items-center py-4 bg-white drop-shadow-md  flex-col lg:flex-row gap-5 lg:gap-0">
@@ -8,7 +13,8 @@ export default function NavBar() {
           RecipeLair
         </h1>
       </div>
-      <form action="">
+      <form >
+        <SearchIcon/>
         <input
           type="text"
           name="search"
