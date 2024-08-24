@@ -3,9 +3,16 @@ import HomeIcon from "@mui/icons-material/Home";
 import GradeIcon from "@mui/icons-material/Grade";
 import RamenDiningIcon from "@mui/icons-material/RamenDining";
 import { NavLink } from "react-router-dom";
+import { useContext } from "react";
+import { GlobalContext } from "../context";
 console.log(SearchIcon);
 
 export default function NavBar() {
+
+
+  const {searchParam, setSearchParam }=useContext(GlobalContext)
+
+
   return (
     <div>
       <nav className="flex top-0  w-[100%]  justify-between items-center py-4 bg-white drop-shadow-md  flex-col lg:flex-row gap-5 lg:gap-0">
