@@ -4,15 +4,13 @@ import GradeIcon from "@mui/icons-material/Grade";
 import RamenDiningIcon from "@mui/icons-material/RamenDining";
 import { NavLink } from "react-router-dom";
 import { useContext } from "react";
-import { GlobalContext } from "../context";
+import { GlobalContext } from "../context/context";
 console.log(SearchIcon);
 
 export default function NavBar() {
-
-
-  const {searchParam, setSearchParam }=useContext(GlobalContext)
-
-
+  const { searchParam, setSearchParam } = useContext(GlobalContext);
+  console.log(searchParam);
+  
   return (
     <div>
       <nav className="flex top-0  w-[100%]  justify-between items-center py-4 bg-white drop-shadow-md  flex-col lg:flex-row gap-5 lg:gap-0">
@@ -31,6 +29,8 @@ export default function NavBar() {
           <input
             type="text"
             name="search"
+            value={searchParam}
+            onChange={(event) => setSearchParam(event.target.value)}
             placeholder="Enter Items"
             className="ml-2 border border-orange-500 border-t-0 border-l-0 border-r-0 border-b-2 focus:outline-none p-2  ml-8 lg:mr-5"
           />
@@ -49,12 +49,11 @@ export default function NavBar() {
                     color: "white",
                     width: "4rem",
                     boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
-                    transition: 'transform 0.3s ease, background 0.3s ease',
-                    '&:hover':{
-                      transform: 'scale(1.1)',
-                      background: 'linear-gradient(to right, red, red)',
-                    
-                    }
+                    transition: "transform 0.3s ease, background 0.3s ease",
+                    "&:hover": {
+                      transform: "scale(1.1)",
+                      background: "linear-gradient(to right, red, red)",
+                    },
                   }}
                 />
               }
@@ -71,12 +70,11 @@ export default function NavBar() {
                     color: "white",
                     width: "4rem",
                     boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
-                    transition: 'transform 0.3s ease, background 0.3s ease',
-                    '&:hover':{
-                      transform: 'scale(1.1)',
-                      background: 'linear-gradient(to right, red, red)',
-                    
-                    }
+                    transition: "transform 0.3s ease, background 0.3s ease",
+                    "&:hover": {
+                      transform: "scale(1.1)",
+                      background: "linear-gradient(to right, red, red)",
+                    },
                   }}
                 />
               }
